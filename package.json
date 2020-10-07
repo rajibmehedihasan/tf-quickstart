@@ -1,0 +1,11 @@
+{
+    "name": "tf-quickstart",
+    "version": "1.0.0",
+    "description": "A quickstart for themeforest HTML template projects.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Mehedi Hasan",
+    "license": "ISC"
+}
