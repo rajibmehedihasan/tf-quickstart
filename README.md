@@ -18,8 +18,10 @@ $ gulp
 
 ### Build for production and launch server
 
+```bash
 $ gulp build
 $ gulp
+```
 
 ### Generate file for themeforest and preview
 
