@@ -4,32 +4,55 @@ A quickstart for themeforest HTML template projects using gulp.js.
 
 ## Build Setup
 
+### Install dependencies
+
 ```bash
-# install dependencies
 $ yarn install
+```
 
-# start development server at localhost:6416
+### Start development server at localhost:6416
+
+```bash
 $ gulp
+```
 
-# build for production and launch server
+### Build for production and launch server
+
 $ gulp build
 $ gulp
 
-# generate file for themeforest and preview
+### Generate file for themeforest and preview
+
+```bash
 $ gulp generate
+```
 
-# build Themeforest package
+### Build Themeforest package
+
+```bash
 $ gulp tf
+```
 
-# minify preview
+### Minify preview
+
+```bash
 $ gulp minify
+```
 
-# make zip
+### Make zip
+
+```bash
 $ gulp zip
+```
 
-# wrap project
+### Wrap project
+
+```bash
 $ gulp wrap
+```
 
-# if need to clear all task
+### If need to clear all task
+
+```bash
 $ gulp all-clear
 ```
