@@ -58,6 +58,8 @@
         "func-names": 0,
         "space-in-parens": 0,
         "space-before-function-paren": 0,
+        "array-bracket-spacing": 0,
+        "object-curly-spacing": 0,
         "comma-dangle": 0,
         "max-len": 0,
         "import/extensions": 0,
@@ -84,10 +86,10 @@
             {
                 "trailingComma": "es5",
                 "printWidth": 80,
-                "endOfLine": "auto",
                 "tabWidth": 4,
                 "useTabs": false,
                 "singleQuote": true,
+                "bracketSpacing": false,
                 "proseWrap": "never",
                 "htmlWhitespaceSensitivity": "strict"
             }
