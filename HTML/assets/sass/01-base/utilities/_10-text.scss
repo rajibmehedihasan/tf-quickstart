@@ -1,0 +1,124 @@
+// stylelint-disable declaration-no-important
+
+//
+// Text
+//
+
+.text-monospace {
+    font-family: $font-family-monospace !important;
+}
+
+// Alignment
+
+.text-justify {
+    text-align: justify !important;
+}
+.text-wrap {
+    white-space: normal !important;
+}
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .text#{$infix}-left {
+            text-align: left !important;
+        }
+        .text#{$infix}-right {
+            text-align: right !important;
+        }
+        .text#{$infix}-center {
+            text-align: center !important;
+        }
+    }
+}
+
+// Transformation
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+// Weight and italics
+.fw-light {
+    font-weight: $light !important;
+}
+
+.fw-regular {
+    font-weight: $regular !important;
+}
+
+.fw-medium {
+    font-weight: $medium !important;
+}
+
+.fw-semi-bold {
+    font-weight: $semi-bold !important;
+}
+
+.fw-bold {
+    font-weight: $bold !important;
+}
+
+.fw-extra-bold {
+    font-weight: $extra-bold !important;
+}
+
+.fw-black {
+    font-weight: $black !important;
+}
+
+.font-italic {
+    font-style: italic !important;
+}
+
+// Contextual colors
+.text-title {
+    color: $title-color !important;
+}
+
+.text-link {
+    color: $c1 !important;
+}
+
+.text-white {
+    color: $white !important;
+}
+
+// Decoration
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+// Break
+.text-break {
+    word-break: break-word !important; // IE & < Edge 18
+    overflow-wrap: break-word !important;
+}
+
+// Reset
+.text-reset {
+    color: inherit !important;
+}

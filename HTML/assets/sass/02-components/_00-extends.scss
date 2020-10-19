@@ -1,0 +1,71 @@
+// Transitions
+%trans3 {
+    transition: 0.3s ease-in;
+}
+
+// Font Family
+%title_font {
+    font-family: $heading_font;
+}
+
+%body_font {
+    font-family: $body_font;
+}
+
+// Background Cover
+%bg-cover {
+    background-size: cover;
+    background-position: center;
+}
+
+//Width 0
+%w-0 {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    left: 0;
+    top: 0;
+}
+
+//List
+%list-unstyled {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+%button-round {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    min-width: 50px;
+    height: 50px;
+    background-color: #fff8ec;
+    border: 1px solid transparent;
+    &:hover {
+        border-color: #ffdbd5;
+    }
+}
+
+//Input Style
+%input-style {
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    padding: 0 15px;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #fbfbfb;
+}
+
+%input-style-focus {
+    border-color: #ffdbd5;
+    background-color: #fff;
+    &::placeholder {
+        color: $text-color !important;
+    }
+}

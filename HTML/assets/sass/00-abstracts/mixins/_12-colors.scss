@@ -1,0 +1,25 @@
+// Colors
+@mixin colors($color, $class) {
+    %#{$class} {
+        color: $color;
+    }
+    %#{$class}-bg {
+        background-color: $color;
+    }
+    %#{$class}-bo {
+        border-color: $color;
+    }
+}
+
+// Gradients
+@mixin vertical-gradient($from, $to) {
+    background: linear-gradient(to bottom, $from 0%, $to 100%);
+}
+
+@mixin horizontal-gradient($from, $to) {
+    background: linear-gradient(to right, $from 0%, $to 100%);
+}
+
+@mixin angle-gradient($angle, $from, $to) {
+    background: linear-gradient(#{$angle}deg, $from 0%, $to 100%);
+}

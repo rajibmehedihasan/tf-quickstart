@@ -1,0 +1,17 @@
+//Make Column
+@mixin make-col-ready($gutter: $grid-gutter-width) {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+    flex: 0 0 percentage($size / $columns);
+    max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+    $num: $size / $columns;
+    margin-left: if($num == 0, 0, percentage($num));
+}
