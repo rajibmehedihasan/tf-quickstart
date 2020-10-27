@@ -1,5 +1,5 @@
 /*= ========== Init Plugins ============== */
-const projectName = 'laracart';
+const projectName = 'tf-quickstart';
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const prefixer = require('gulp-autoprefixer');
@@ -109,7 +109,9 @@ gulp.task('images', function (cb) {
 
 /*= ========== HTML Valid ============== */
 gulp.task('html-valid', function (cb) {
-    gulp.src('HTML/*.html').pipe(htmlhint()).pipe(htmlhint.failAfterError());
+    gulp.src('HTML/*.html')
+        .pipe(htmlhint({'attr-lowercase': ['viewBox']}))
+        .pipe(htmlhint.failAfterError());
     cb();
 });
 
@@ -187,7 +189,6 @@ gulp.task('previewES5', function (cb) {
 
 /*= ========== Minify ============== */
 gulp.task('minify', function (cb) {
-
     // Generate all.min.css
     gulp.src([
         './HTML/assets/css/all.min.css',
@@ -255,7 +256,7 @@ gulp.task('minify', function (cb) {
 
 /*= ========== Delete Previous ZIP ============== */
 gulp.task('clean-zip', function (cb) {
-    del.sync(['./*.zip']);
+    del.sync(['./html-tf*.zip', './html-preview.zip']);
     cb();
 });
 
@@ -318,8 +319,8 @@ gulp.task('wrap', gulp.series('clean-wrap-zip', 'wrap'));
 
 /*= ========== Clean All ============== */
 gulp.task('all-clear', function (cb) {
-    del.sync(['./HTML-tf', './HTML-preview', './*.zip']);
+    del.sync(['./HTML-tf', './HTML-preview']);
     cb();
 });
 
-gulp.task('all-clear');
+gulp.task('distroy', gulp.series('all-clear', 'clean-zip', 'clean-wrap-zip'));

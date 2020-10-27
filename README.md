@@ -56,5 +56,5 @@ $ gulp wrap
 ### If need to clear all task
 
 ```bash
-$ gulp all-clear
+$ gulp distroy
 ```
